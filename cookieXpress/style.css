@@ -1,0 +1,439 @@
+:root {
+    --primary: #653411;
+    --primary-dark: #522504;
+    --accent: #C07239;
+    --dark: #1E1E1E;
+    --light: #F5F5F5;
+    --success: #4CAF50;
+    --error: #f44336;
+    --warning: #ff9800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: "Inter", sans-serif;
+    background: #fafafa;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============ NAVIGATION ============ */
+.navbar {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.greeting {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+}
+
+.cart-link {
+    background: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* ============ BUTTONS ============ */
+.btn {
+    padding: 10px 20px;
+        border-radius: 8px;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    /* Primary Button */
+    .btn-primary, .first.btn {
+        background: var(--primary);
+        color: white;
+    }
+
+    .btn-primary:hover:not(:disabled), .first.btn:hover:not(:disabled) {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Secondary Button */
+    .btn-secondary, .second.btn {
+        background: var(--primary-dark);
+        color: white;
+    }
+
+    .btn-secondary:hover:not(:disabled), .second.btn:hover:not(:disabled) {
+        background: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Shop Button */
+    .btn-shop {
+        background: var(--primary);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 25px;
+    }
+
+    .btn-shop:hover:not(:disabled) {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Add Button */
+    .btn-add {
+        background: var(--accent);
+        color: white;
+        padding: 10px 18px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+    }
+
+    .btn-add:hover:not(:disabled) {
+        background: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Update Button */
+    .btn-update {
+        background: var(--primary);
+        color: white;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .btn-update:hover:not(:disabled) {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* Remove Button */
+    .btn-remove {
+        background: #f44336;
+        color: white;
+        padding: 8px 16px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+
+    .btn-remove:hover:not(:disabled) {
+        background: #da190b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+    }
+
+    /* Checkout Button */
+    .btn-checkout {
+        background: var(--success);
+        color: white;
+        width: 100%;
+        padding: 14px;
+        margin-top: 1rem;
+        border-radius: 8px;
+        font-size: 1.05rem;
+    }
+
+    .btn-checkout:hover:not(:disabled) {
+        background: #45a049;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    /* Continue Button */
+    .btn-continue {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid var(--primary);
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 12px;
+    }
+
+    .btn-continue:hover:not(:disabled) {
+        background: var(--primary);
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Save Button */
+    .btn-save {
+        background: var(--primary);
+        color: white;
+        padding: 12px 30px;
+        margin-top: 1rem;
+        border-radius: 8px;
+    }
+
+    .btn-save:hover:not(:disabled) {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Disabled Button */
+    .btn-disabled {
+        background: #ccc;
+        color: #999;
+        cursor: not-allowed;
+}
+
+/* ============ FORMS ============ */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(101, 52, 17, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ============ MESSAGES ============ */
+.message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.message-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* ============ HERO SECTION ============ */
+.home-page {
+    background-image: url("imagecookie/image\ 2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+    padding: 6rem 4rem;
+    background: linear-gradient(135deg, rgba(101, 52, 17, 0.1) 0%, rgba(192, 114, 57, 0.05) 100%);
+}
+
+.left-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: -1;
+}
+
+.left-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+}
+
+.left-image img:hover {
+    transform: translateY(-10px) scale(1.02);
+    filter: drop-shadow(0 15px 40px rgba(101, 52, 17, 0.2));
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.middle h1 {
+    font-size: 3.5rem;
+    color: var(--primary);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+.middle h2 {
+    font-size: 1.3rem;
+    color: #666;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.floating-auth {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: auto;
+}
+
+.footer-img {
+    width: 100%;
+    margin-top: auto;
+}
+
+.footer-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+        gap: 2rem;
+        min-height: auto;
+    }
+
+    .left-image {
+        order: 0;
+        margin-bottom: 1rem;
+    }
+
+    .left-image img {
+        max-width: 300px;
+    }
+
+    .middle {
+        text-align: center;
+    }
+
+    .middle h1 {
+        font-size: 2.2rem;
+    }
+
+    .middle h2 {
+        font-size: 1rem;
+    }
+
+    .floating-auth {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .floating-auth .btn {
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}

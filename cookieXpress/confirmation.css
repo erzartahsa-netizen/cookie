@@ -1,0 +1,144 @@
+/* ============ CONFIRMATION PAGE ============ */
+
+.confirmation-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.confirmation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 3rem;
+    padding: 3rem 2rem;
+    align-items: center;
+}
+
+.confirmation-content {
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0 auto 2rem;
+}
+
+.confirmation-content h1 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.order-details {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #666;
+    font-weight: 600;
+}
+
+.value {
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+.value.price {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.value.status {
+    background: #d4edda;
+    color: #155724;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+.confirmation-message {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.confirmation-message p {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.confirmation-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.confirmation-actions .btn {
+    padding: 12px 30px;
+}
+
+.confirmation-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-image img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .confirmation-container {
+        grid-template-columns: 1fr;
+    }
+
+    .confirmation-content h1 {
+        font-size: 2rem;
+    }
+
+    .confirmation-actions {
+        flex-direction: column;
+    }
+
+    .confirmation-actions .btn {
+        width: 100%;
+    }
+}
+
+
+
